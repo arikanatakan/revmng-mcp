@@ -48,7 +48,7 @@ ax.text(3, 91, "validated revenue-management tools for AI agents", fontsize=9.5,
         color=MUT, ha="left", fontstyle="italic")
 
 # agent
-box(12, 60, 18, 22, "AI agent\n\nMCP client\n(Claude Code,\nClaude Desktop, ...)",
+box(12, 60, 18, 22, "AI agent\n\nMCP client",
     NEUT_F, NEUT_E, fs=8.2)
 
 # server container
