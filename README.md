@@ -3,7 +3,7 @@
 # revmng-mcp
 
 [![CI](https://github.com/arikanatakan/revmng-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/arikanatakan/revmng-mcp/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/revmng-mcp)](https://pypi.org/project/revmng-mcp/)
+[![PyPI](https://img.shields.io/pypi/v/revmng-mcp?v=1)](https://pypi.org/project/revmng-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 An MCP server that exposes [revmng](https://github.com/arikanatakan/revmng), the
