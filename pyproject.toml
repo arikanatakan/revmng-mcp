@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "revmng-mcp"
+version = "0.1.0"
+description = "MCP server for revmng: revenue-management decisions for AI agents (seat protection, overbooking, pricing, bid prices, charts)."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Atakan Arikan" }]
+requires-python = ">=3.10"
+dependencies = ["revmng[plot,network]>=0.2.0", "mcp>=1.0"]
+keywords = [
+    "mcp", "model-context-protocol", "ai-agents", "revenue-management",
+    "yield-management", "pricing", "overbooking", "emsr", "bid-price",
+    "airline", "hotel",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Office/Business :: Financial",
+]
+
+[project.scripts]
+revmng-mcp = "revmng_mcp.server:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff", "build"]
+
+[project.urls]
+Homepage = "https://github.com/arikanatakan/revmng-mcp"
+Repository = "https://github.com/arikanatakan/revmng-mcp"
+Issues = "https://github.com/arikanatakan/revmng-mcp/issues"
+Library = "https://github.com/arikanatakan/revmng"
+
+[tool.setuptools.packages.find]
+include = ["revmng_mcp*"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
