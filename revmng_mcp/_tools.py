@@ -225,7 +225,8 @@ def evaluate_group(group_rate: float, units: float, variable_cost: float = 0.0,
     """
     try:
         if displacement_cost is None and marginal_value is None:
-            if None in (group_size, capacity, demand, value_per_unit):
+            if (group_size is None or capacity is None or demand is None
+                    or value_per_unit is None):
                 return {"error": "give displacement_cost, marginal_value, or the "
                         "scenario (group_size, capacity, demand, value_per_unit)",
                         "hint": _HINT}
