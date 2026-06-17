@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -7,7 +7,8 @@ name = "revmng-mcp"
 version = "0.1.0"
 description = "MCP server for revmng: revenue-management decisions for AI agents (seat protection, overbooking, pricing, bid prices, charts)."
 readme = "README.md"
-license = { text = "MIT" }
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{ name = "Atakan Arikan" }]
 requires-python = ">=3.10"
 dependencies = ["revmng[plot,network]>=0.2.0", "mcp>=1.0"]
@@ -20,11 +21,11 @@ classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Science/Research",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering",
     "Topic :: Office/Business :: Financial",
 ]
@@ -33,7 +34,7 @@ classifiers = [
 revmng-mcp = "revmng_mcp.server:main"
 
 [project.optional-dependencies]
-dev = ["pytest>=7", "ruff", "build"]
+dev = ["pytest>=7", "ruff", "mypy", "build"]
 
 [project.urls]
 Homepage = "https://github.com/arikanatakan/revmng-mcp"
@@ -46,6 +47,9 @@ include = ["revmng_mcp*"]
 
 [tool.ruff]
 line-length = 88
+
+[tool.mypy]
+ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
